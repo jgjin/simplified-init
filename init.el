@@ -511,6 +511,30 @@ Normal  _s_ String _d_ Delete
   (yank)
   (call-interactively 'indent-region))
 
+(defun left-char-message ()
+  "Execute 'left-char' with reminder not to use the left arrow key."
+  (interactive)
+  ;; (left-char)
+  (message "%s" "Please use M-a instead of the left arrow key."))
+
+(defun right-char-message ()
+  "Execute 'right-char' with reminder not to use the right arrow key."
+  (interactive)
+  ;; (right-char)
+  (message "%s" "Please use M-d instead of the right arrow key."))
+
+(defun previous-line-message ()
+  "Execute 'previous-line' with reminder not to use the up arrow key."
+  (interactive)
+  ;; (previous-line)
+  (message "%s" "Please use M-w instead of the up arrow key."))
+
+(defun next-line-message ()
+  "Execute 'next-line' with reminder not to use the down arrow key."
+  (interactive)
+  ;; (next-line)
+  (message "%s" "Please use M-s instead of the down arrow key."))
+
 (defun rename-file-and-buffer ()
   "Rename the current buffer and file it is visiting."
   (interactive)
